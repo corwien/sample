@@ -32,3 +32,6 @@ $compiledPath = __DIR__.'/cache/compiled.php';
 if (file_exists($compiledPath)) {
     require $compiledPath;
 }
+
+// 加载数据库配置方法
+require __DIR__.'/helpers.php';
