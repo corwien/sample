@@ -25,3 +25,9 @@ Route::get('/about', 'StaticPagesController@about')->name('about');
 Route::get('/signup', 'UsersController@create')->name('signup');
 
 resource('users', 'UsersController');
+
+
+// 会话控制，登录，退出
+get('login', 'SessionsController@create')->name('login');
+post('login', 'SessionsController@store')->name('login');
+delete('logout', 'SessionsController@destroy')->name('logout');
