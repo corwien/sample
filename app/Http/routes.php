@@ -46,3 +46,9 @@ post('password/reset', 'Auth\PasswordController@postReset')->name('password.upda
 // 微博路由，只实现创建删除操作
 resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
 
+// 关注
+get('/users/{id}/followings', 'UsersController@followings')->name('users.followings');
+get('/users/{id}/followers', 'UsersController@followers')->name('users.followers');
+
+post('/users/followers/{id}', 'FollowersController@store')->name('followers.store');
+delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.destroy');
