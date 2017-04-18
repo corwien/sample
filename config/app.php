@@ -145,6 +145,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // admin-管理后台 【20170418】
+        // https://laravel-china.org/topics/2407/use-laravel-administrator-to-quickly-generate-data-model-administrator-tutorial
+        Frozennode\Administrator\AdministratorServiceProvider::class,
+
     ],
 
     /*
